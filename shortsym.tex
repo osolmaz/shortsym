@@ -1,0 +1,92 @@
+\documentclass[]{article}
+% \usepackage[osf,sc]{mathpazo}
+% \usepackage{eulervm}
+
+\usepackage{shortsym}
+\usepackage{booktabs}
+
+\title{\texttt{shortsym}\textnormal{ --- shorter math symbols for \LaTeXe}}
+\author{H.\ Onur Solmaz}
+\begin{document}
+\maketitle
+\section{Symbol Macros}
+
+This package aims to make typing of symbols much easier by providing some macros
+prefixing conventions for different math alphabets. For example to type in a
+upright bold A, one can use the \verb+\VA+ macro which prefixes the letter A
+with the macro character \verb+\+ and the letter \verb+V+, which has been chosen
+as the convention for ``upright bold'' math symbols.
+
+These conventions have been chosen to reduce the number of characters typed,
+whereas also to make sure the equations stay readable in code. For example, one might guess
+the letter B might stand for bold and I might stand for italic in some prefixes,
+but the prefixes don't have to make sense for all alphabets.
+For the list of all prefixes for
+specific alphabets, please refer to Table~\ref{tb:math}.
+
+Normal Greek letters are slanted in lowercase and upright in uppercase. To
+obtain bold Greek letters, use the \verb+\B+ prefix, e.g. \verb+\BXi+ for
+uppercase xi and \verb+\Bxi+ for lowercase xi.
+
+Also, \verb+\vareps+ and \verb+\varthe+ macros are defined as shortcuts to
+\verb+\varepsilon+ and \verb+\vartheta+.z
+
+For numbers, the written forms can be prefixed to obtain corresponding symbols,
+like \verb+\Vone+ and \verb+\Izero+. Observe the samples in Table~\ref{tb:math}
+for alphabets in which this is possible.
+
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{p{14em} l l l l}
+    \toprule
+    Name & \LaTeX{} package & Prefix & Shorthand for & Sample \\
+    \midrule
+    Normal letters & none & none & none & $ABCdef$ \\
+    Upright letters & none & \verb+\U+ & \verb+\mathrm{*}+ & $\UA\UB\UC\Ud\Ue\Uf$\\
+    Bold letters & none & \verb+\B+ & \verb+\boldsymbol{*}+ & $\BA\BB\BC\Bd\Be\Bf\Bone\Btwo\Bthree$ \\
+    Upright bold letters & none & \verb+\V+ & \verb+\boldsymbol{\mathrm{*}}+ & $\VA\VB\VC\Vd\Ve\Vf\Vone\Vtwo\Vthree$ \\
+    Sans serif & none & \verb+\F+ & & $\FA\FB\FC\Fd\Fe\Ff$\\
+    Bold sans serif & none & \verb+\BF+ & & $\BFA\BFB\BFC\BFd\BFe\BFf$\\
+    AMS blackboard bold* & \texttt{amsfonts} & \verb+\I+ & & $\IA\IB\IC$ \\
+    % \texttt{bbold} blackboard bold & \texttt{bbold},\texttt{mathbbol} & \verb+\II+ & $\IIA\IIB\IIC\IId\IIe\IIf\IIone\IItwo\IIthree$ \\
+    \texttt{bbm} blackboard bold sans & \texttt{bbm} & \verb+\BB+ & & $\BBA\BBB\BBC\BBd\BBe\BBf$ \\
+    \texttt{bbm} blackboard bold serif & \texttt{bbm} & \verb+\bB+ & & $\bBA\bBB\bBC\bBd\bBe\bBf$\\
+    \texttt{bbm} blackboard bold sans italic & \texttt{bbm} & \verb+\IB+ & & $\IBA\IBB\IBC\IBd\IBe\IBf$\\
+    \texttt{bbm} blackboard bold serif italic & \texttt{bbm} & \verb+\iB+ & & $\iBA\iBB\iBC\iBd\iBe\iBf$\\
+    % Ralph Smith’s Formal Script* & \texttt{rsfs} & \verb+\ral+ & $\ralA\ralB\ralC$\\
+    % Ralph Smith’s Formal Script bold* & \texttt{rsfs} & \verb+\Bral+ & $\BralA\BralB\BralC$\\
+    % \texttt{euscript} cursive* & \texttt{euscript} & \verb+\eul+ & $\eulA\eulB\eulC$\\
+    % \texttt{euscript} cursive bold* & \texttt{euscript} & \verb+\Beul+ & $\BeulA\BeulB\BeulC$\\
+    Calligraphic letters* & none & \verb+\C+ & & $\CA\CB\CC$ \\
+    Calligraphic bold letters* & none & \verb+\BC+ & & $\BCA\BCB\BCC$ \\
+    Fraktur & \texttt{amsfonts} & \verb+\frak+ & & $\frakA\frakB\frakC\fraka\frakb\frakc$\\
+    Fraktur bold & \texttt{amsfonts} & \verb+\Bfrak+ & & $\BfrakA\BfrakB\BfrakC\Bfraka\Bfrakb\Bfrakc$\\
+    \bottomrule
+  \end{tabular}
+  \caption{Guide for symbol prefixes for latin letters. For more information about math alphabets,
+    please refer to {\em Table 213 -- Math Alphabets} of The
+    Comprehensive \LaTeX{} Symbol List by Scott Pakin. The shorthands marked with *
+    are for uppercase letters only.}
+  \label{tb:math}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+\begin{tabular}{p{14em} l l l}
+  \toprule
+  Name & \LaTeX{} package & Prefix & Sample \\
+  \midrule
+  % Italic capitals letters & none & none & $\SGamma\SDelta\STheta$ \\
+  Normal & none & none & $\alpha\beta\gamma\Delta\Theta\Lambda$ \\
+  Bold & none & \verb+\B+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
+  % Upright lowercase & none & \verb+\U+ & $\Ualpha\Ubeta\Ugamma$ \\
+  % Upright bold lowercase & none & \verb+\V+ & $\Valpha\Vbeta\Vgamma$ \\
+  % Slanted uppercase & none & \verb+\S+ & $\SDelta\STheta\SLambda$ \\
+  \bottomrule
+\end{tabular}
+\caption{Guide for symbol prefixes for greek letters.}
+\label{tb:greek1}
+\end{table}
+
+\end{document}

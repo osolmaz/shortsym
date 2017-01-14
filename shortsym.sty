@@ -1,0 +1,52 @@
+\ProvidesPackage{shortsym}
+
+% Read the README and docs for descriptions.
+% (c) H. Onur Solmaz 2016
+
+% xspace is required to ensure trailing spaces after macros, when used
+% without curly braces
+% \usepackage{amsmath, amssymb, amscd, MnSymbol,mathrsfs}
+% \usepackage{amsmath,amsbsy}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{bm}
+
+% \usepackage{unicode-math}
+% \usepackage{upgreek}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\vareps}{\varepsilon}
+\newcommand{\varthe}{\vartheta}
+
+% \DeclareSymbolFont{sfoperators}{OT1}{cmss}{m}{n}
+% \DeclareSymbolFontAlphabet{\mathsf}{sfoperators}
+
+% \makeatletter
+% \def\operator@font{\mathgroup\symsfoperators}
+% \makeatother
+
+% The following set of definitions are to help the typesetting of
+% formatted single letters, which are generally used for denoting
+% vectors, tensors etc.
+% These are designed to minimize the number of keystrokes while
+% writing equations
+
+\input{./shortsym_bold.sty}
+\input{./shortsym_upright.sty}
+\input{./shortsym_upright_bold.sty}
+\input{./shortsym_amsbb.sty}
+\input{./shortsym_sans.sty}
+\input{./shortsym_sans_bold.sty}
+\input{./shortsym_cal.sty}
+\input{./shortsym_cal_bold.sty}
+\input{./shortsym_bbm.sty}
+\input{./shortsym_frak.sty}
+% \input{./shortsym_bbold.sty}
+% \input{./shortsym_euscript.sty}
+
+\input{./shortsym_greek_bold.sty}
+% \input{./shortsym_greek_slanted_uppercase.sty}
+% \input{./shortsym_greek_upright_lowercase.sty}
+% \input{./shortsym_greek_upright_bold_lowercase.sty}
+
