@@ -3,9 +3,6 @@
 % Read the README and docs for descriptions.
 % (c) H. Onur Solmaz 2016
 
-% xspace is required to ensure trailing spaces after macros, when used
-% without curly braces
-% \usepackage{amsmath, amssymb, amscd, MnSymbol,mathrsfs}
 % \usepackage{amsmath,amsbsy}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -19,13 +16,6 @@
 \newcommand{\vareps}{\varepsilon}
 \newcommand{\varthe}{\vartheta}
 
-% \DeclareSymbolFont{sfoperators}{OT1}{cmss}{m}{n}
-% \DeclareSymbolFontAlphabet{\mathsf}{sfoperators}
-
-% \makeatletter
-% \def\operator@font{\mathgroup\symsfoperators}
-% \makeatother
-
 % The following set of definitions are to help the typesetting of
 % formatted single letters, which are generally used for denoting
 % vectors, tensors etc.
@@ -33,6 +23,7 @@
 % writing equations
 
 \input{./shortsym_bold.sty}
+\input{./shortsym_italic.sty}
 \input{./shortsym_upright.sty}
 \input{./shortsym_upright_bold.sty}
 \input{./shortsym_amsbb.sty}
@@ -44,6 +35,8 @@
 \input{./shortsym_frak.sty}
 % \input{./shortsym_bbold.sty}
 % \input{./shortsym_euscript.sty}
+
+% Greek letters
 
 \input{./shortsym_greek_bold.sty}
 % \input{./shortsym_greek_slanted_uppercase.sty}
