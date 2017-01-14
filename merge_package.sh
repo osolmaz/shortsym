@@ -1,9 +1,9 @@
 cat shortsym_header.sty > shortsym.sty
 
-cat shortsym_bold.sty >> shortsym.sty
-cat shortsym_italic.sty >> shortsym.sty
 cat shortsym_upright.sty >> shortsym.sty
-cat shortsym_upright_bold.sty >> shortsym.sty
+cat shortsym_italic.sty >> shortsym.sty
+cat shortsym_bold.sty >> shortsym.sty
+cat shortsym_bold_italic.sty >> shortsym.sty
 cat shortsym_amsbb.sty >> shortsym.sty
 cat shortsym_sans.sty >> shortsym.sty
 cat shortsym_sans_bold.sty >> shortsym.sty
