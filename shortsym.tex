@@ -6,7 +6,7 @@
 \usepackage{booktabs}
 
 \title{\texttt{shortsym}\textnormal{ --- shorter math symbols for \LaTeXe}}
-\author{H.\ Onur Solmaz}
+\author{Onur Solmaz}
 \begin{document}
 \maketitle
 
@@ -23,12 +23,13 @@
 \end{myverbbox}
 
 
-This package aims to make typing of symbols much easier by providing some macros
-that use prefixes for different math alphabets.
+Easily type stylized math symbols.
 
+This package provides macros that use a prefixing convention in order to render
+equations shorter and more readable.
 For example to type in an
-upright bold A, one can use the \verb+\VA+ macro which prefixes the letter A
-with the macro character \verb+\+ and the letter \verb+V+, which has been chosen
+upright bold A, use the \verb+\VA+ macro, which prefixes the letter A
+with the letter \verb+V+, which has been chosen
 as the convention for ``upright bold'' math symbols.
 
 \begin{alignat*}{4}
@@ -38,19 +39,10 @@ as the convention for ``upright bold'' math symbols.
   &\text{and so on.}  &  & &&  \\
 \end{alignat*}
 
-These conventions have been chosen to reduce the number of characters typed,
-while making sure the equations stay readable in code. For example, one might guess
-the letter \texttt{B} might stand for bold and \texttt{I} might stand for italic in some prefixes,
-but the prefixes don't have to make sense for all alphabets.
+These conventions have been chosen to reduce the amount of code,
+while making sure the equations stay readable.
 For the list of all prefixes for
 specific alphabets, please refer to Table~\ref{tb:math}.
-
-Normal Greek letters are slanted in lowercase and upright in uppercase. To
-obtain bold Greek letters, use the \verb+\B+ prefix, e.g. \verb+\BXi+ for
-uppercase xi and \verb+\Bxi+ for lowercase xi.
-
-Also, \verb+\vareps+ and \verb+\varthe+ macros are defined as shortcuts to
-\verb+\varepsilon+ and \verb+\vartheta+.z
 
 For numbers, the written forms can be prefixed to obtain corresponding symbols,
 like \verb+\Vone+ and \verb+\Izero+. Observe the samples in Table~\ref{tb:math}
@@ -58,57 +50,57 @@ for alphabets in which this is possible.
 
 \begin{table}[htbp]
   \hspace{-1.8cm}
-  \begin{tabular}{p{14em} l l l l}
+  \begin{tabular}{l l l l l}
     \toprule
-    Name & \LaTeX{} package & Prefix & Shorthand for & Sample \\
+    Name & Req. package & Prefix & Shorthand for & Sample \\
     \midrule
-    Upright letters & \texttt{amsmath} & \verb+\U+ & \verb+\mathrm{*}+ & $\UA\UB\UC\Ud\Ue\Uf\Uone\Utwo\Uthree$\\
-    Italic letters & \texttt{amsmath} & \verb+\S+ & \verb+\mathit{*}+ & $\JA\JB\JC\Jd\Je\Jf\Jone\Jtwo\Jthree$ \\
-    Bold letters & \texttt{amsmath} & \verb+\V+ & \verb+\bm{\mathrm{*}}+ & $\VA\VB\VC\Vd\Ve\Vf\Vone\Vtwo\Vthree$ \\
-    Bold italic letters & \texttt{amsmath} & \verb+\B+ & \verb+\bm{\mathnormal{*}}+ & $\BA\BB\BC\Bd\Be\Bf\Bone\Btwo\Bthree$ \\
-    Sans serif & \texttt{amsmath} & \verb+\F+ & \verb+\mathsf{*}+ & $\FA\FB\FC\Fd\Fe\Ff\Fone\Ftwo\Fthree$\\
-    Bold sans serif & \texttt{amsmath} & \verb+\BF+ & \verb+\bm{\mathsf{*}}+ & $\BFA\BFB\BFC\BFd\BFe\BFf\BFone\BFtwo\BFthree$\\
-    AMS blackboard bold* & \texttt{amsfonts} & \verb+\I+ & \verb+\mathbb{*}+ &
-                                                                               $\IA\IB\IC$ \\ %\Ione\Itwo\Ithree
+    Upright & -- & \verb+\U+ & \verb+\mathrm{*}+ & $\UA\UB\UC\Ud\Ue\Uf\Uone\Utwo\Uthree$\\
+    Bold & -- & \verb+\B+ & \verb+\bm{*}+ & $\BA\BB\BC\Bd\Be\Bf\Bone\Btwo\Bthree$ \\
+    Greek bold & -- & \verb+\B+ & \verb+\bm{*}+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
+    Italic & -- & \verb+\J+ & \verb+\mathit{*}+ & $\JA\JB\JC\Jd\Je\Jf\Jone\Jtwo\Jthree$ \\
+    Bold upright & -- & \verb+\V+ & \verb+\bm{\mathrm{*}}+ & $\VA\VB\VC\Vd\Ve\Vf\Vone\Vtwo\Vthree$ \\
+    Bold italic & -- & \verb+\BJ+ & \verb+\bm{\mathit{*}}+ & $\BJA\BJB\BJC\BJd\BJe\BJf\BJone\BJtwo\BJthree$ \\
+    Sans serif & -- & \verb+\F+ & \verb+\mathsf{*}+ & $\FA\FB\FC\Fd\Fe\Ff\Fone\Ftwo\Fthree$\\
+    Bold sans serif & -- & \verb+\BF+ & \verb+\bm{\mathsf{*}}+ & $\BFA\BFB\BFC\BFd\BFe\BFf\BFone\BFtwo\BFthree$\\
     % \texttt{bbold} blackboard bold & \texttt{bbold},\texttt{mathbbol} & % \verb+\II+ \verb++ & $\IIA\IIB\IIC\IId\IIe\IIf\IIone\IItwo\IIthree$ \\
-    \texttt{bbm} blackboard bold serif & \texttt{bbm} & \verb+\bB+ & \verb+\mathbbm{*}+ & $\bBA\bBB\bBC\bBd\bBe\bBf$\\
-    \texttt{bbm} blackboard bold sans & \texttt{bbm} & \verb+\BB+ & \verb+\mathbbmss{*}+ & $\BBA\BBB\BBC\BBd\BBe\BBf$ \\
+    % \texttt{bbm} blackboard bold serif & \texttt{bbm} & \verb+\bB+ & \verb+\mathbbm{*}+ & $\bBA\bBB\bBC\bBd\bBe\bBf\bBone\bBtwo\bBthree$\\
+    % \texttt{bbm} blackboard bold sans & \texttt{bbm} & \verb+\BB+ & \verb+\mathbbmss{*}+ & $\BBA\BBB\BBC\BBd\BBe\BBf\BBone\BBtwo\BBthree$ \\
     % \texttt{bbm} blackboard bold sans italic & \texttt{bbm} & \verb+\IB+ & \verb++ & $\IBA\IBB\IBC\IBd\IBe\IBf$\\
     % \texttt{bbm} blackboard bold serif italic & \texttt{bbm} & \verb+\iB+ & \verb++ & $\iBA\iBB\iBC\iBd\iBe\iBf$\\
     % \texttt{euscript} cursive* & \texttt{euscript} & \verb+\eul+ \verb++ & $\eulA\eulB\eulC$\\
     % \texttt{euscript} cursive bold* & \texttt{euscript} & \verb+\Beul+ \verb++ & $\BeulA\BeulB\BeulC$\\
-    Calligraphic letters* & \texttt{amsmath} & \verb+\C+ & \verb+\mathcal{*}+ & $\CA\CB\CC$ \\
-    Calligraphic bold letters* & \texttt{amsmath} & \verb+\BC+ & \verb+\bm{\mathcal{*}}+ & $\BCA\BCB\BCC$ \\
+    Calligraphic* & -- & \verb+\C+ & \verb+\mathcal{*}+ & $\CA\CB\CC$ \\
+    Calligraphic bold* & -- & \verb+\BC+ & \verb+\bm{\mathcal{*}}+ & $\BCA\BCB\BCC$ \\
+    AMS blackboard bold* & \texttt{amsfonts} & \verb+\I+ & \verb+\mathbb{*}+ & $\IA\IB\IC$ \\
     Fraktur & \texttt{amsfonts} & \verb+\fr+ & \verb+\mathfrak{*}+ & $\frA\frB\frC\fra\frb\frc\frone\frtwo\frthree$\\
     Fraktur bold & \texttt{amsfonts} & \verb+\Bfr+ & \verb+\bm{\mathfrak{*}}+ & $\BfrA\BfrB\BfrC\Bfra\Bfrb\Bfrc\Bfrone\Bfrtwo\Bfrthree$\\
     \bottomrule
   \end{tabular}
-  \caption{Guide for symbol prefixes for latin letters. For more information about math alphabets,
-    please refer to {\em Math Alphabets} table of
+  \caption{Prefixes for Latin and Greek letters.
+    The shorthands marked with * are for uppercase letters only.
+    For more information about math
+    alphabets, please refer to {\em Math Alphabets} table of
     \emph{The Comprehensive \LaTeX{} Symbol List by Scott Pakin}.
-    The shorthands marked with * are for uppercase letters only.}
+    }
   \label{tb:math}
 \end{table}
 
-
-
-\begin{table}[htbp]
-  \centering
-\begin{tabular}{p{14em} l l l}
-  \toprule
-  Name & \LaTeX{} package & Prefix & Sample \\
-  \midrule
-  % Italic capitals letters & none & none & $\SGamma\SDelta\STheta$ \\
-  Normal & none & none & $\alpha\beta\gamma\Delta\Theta\Lambda$ \\
-  Bold & none & \verb+\B+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
-  % Upright lowercase & none & \verb+\U+ & $\Ualpha\Ubeta\Ugamma$ \\
-  % Upright bold lowercase & none & \verb+\V+ & $\Valpha\Vbeta\Vgamma$ \\
-  % Slanted uppercase & none & \verb+\S+ & $\SDelta\STheta\SLambda$ \\
-  \bottomrule
-\end{tabular}
-\caption{Guide for symbol prefixes for greek letters.}
-\label{tb:greek1}
-\end{table}
-
+% \begin{table}[htbp]
+%   \centering
+% \begin{tabular}{p{14em} l l l}
+%   \toprule
+%   Name & \LaTeX{} package & Prefix & Sample \\
+%   \midrule
+%   % Italic capitals letters & none & none & $\SGamma\SDelta\STheta$ \\
+%   % Normal & none & none & $\alpha\beta\gamma\Delta\Theta\Lambda$ \\
+%   Bold & none & \verb+\B+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
+%   % Upright lowercase & none & \verb+\U+ & $\Ualpha\Ubeta\Ugamma$ \\
+%   % Upright bold lowercase & none & \verb+\V+ & $\Valpha\Vbeta\Vgamma$ \\
+%   % Slanted uppercase & none & \verb+\S+ & $\SDelta\STheta\SLambda$ \\
+%   \bottomrule
+% \end{tabular}
+% \caption{Guide for symbol prefixes for greek letters.}
+% \label{tb:greek1}
+% \end{table}
 
 \end{document}

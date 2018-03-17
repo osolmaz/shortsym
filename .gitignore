@@ -1,4 +1,7 @@
+*.aux
 *.log
 *.pdf
-*.aux
-
+*.zip
+ignored
+\#*\#
+*~ 
