@@ -1,13 +1,25 @@
-\ProvidesPackage{shortsym}
-
 % Read the README and docs for descriptions.
 % (c) Onur Solmaz 2018
 
-% \usepackage{amsmath,amsbsy}
+\ProvidesPackage{shortsym}
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
-% \usepackage{bbm}
-\usepackage{bm}
+
+%% Global indentation option
+\newif\if@usebm\@usebmfalse
+\DeclareOption{bm}{
+  \@usebmtrue
+}
+
+\ProcessOptions\relax
+
+\if@usebm
+  \usepackage{bm}
+  \let\boldcommand\bm
+\else
+  \let\boldcommand\boldsymbol
+\fi
 
 % \usepackage{unicode-math}
 % \usepackage{upgreek}
@@ -15,5 +27,3 @@
 % The following set of definitions are to help the typesetting of
 % formatted single letters, which are generally used for denoting
 % vectors, tensors etc.
-
-

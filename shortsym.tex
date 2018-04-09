@@ -11,7 +11,7 @@
 \maketitle
 
 \begin{myverbbox}{\lineA}
-\bm{\mathrm{A}}
+\boldsymbol{\mathrm{A}}
 \end{myverbbox}
 
 \begin{myverbbox}{\lineB}
@@ -23,7 +23,7 @@
 \end{myverbbox}
 
 
-Easily type stylized math symbols.
+Easily type math symbols with different fonts.
 
 This package provides macros that use a prefixing convention in order to render
 equations shorter and more readable.
@@ -45,8 +45,18 @@ For the list of all prefixes for
 specific alphabets, please refer to Table~\ref{tb:math}.
 
 For numbers, the written forms can be prefixed to obtain corresponding symbols,
-like \verb+\Vone+ and \verb+\Izero+. Observe the samples in Table~\ref{tb:math}
+like \verb+\Vone+ and \verb+\BJzero+. Observe the samples in Table~\ref{tb:math}
 for alphabets in which this is possible.
+
+\section{Options}
+
+Use the \texttt{bm} option to use \verb+\bm+ instead of \verb+\boldsymbol+ for
+bold symbols:
+
+\begin{verbatim}
+\usepackage[bm]{shortsym}
+\end{verbatim}
+
 
 \begin{table}[htbp]
   \hspace{-1.8cm}
@@ -55,13 +65,13 @@ for alphabets in which this is possible.
     Name & Req. package & Prefix & Shorthand for & Sample \\
     \midrule
     Upright & -- & \verb+\U+ & \verb+\mathrm{*}+ & $\UA\UB\UC\Ud\Ue\Uf\Uone\Utwo\Uthree$\\
-    Bold & -- & \verb+\B+ & \verb+\bm{*}+ & $\BA\BB\BC\Bd\Be\Bf\Bone\Btwo\Bthree$ \\
-    Greek bold & -- & \verb+\B+ & \verb+\bm{*}+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
+    Bold upright & -- & \verb+\V+ & \verb+\boldcommand{\mathrm{*}}+ & $\VA\VB\VC\Vd\Ve\Vf\Vone\Vtwo\Vthree$ \\
+    Bold & -- & \verb+\B+ & \verb+\boldcommand{*}+ & $\BA\BB\BC\Bd\Be\Bf\Bone\Btwo\Bthree$ \\
+    Greek bold & -- & \verb+\B+ & \verb+\boldcommand{*}+ & $\Balpha\Bbeta\Bgamma\BDelta\BTheta\BLambda$ \\
     Italic & -- & \verb+\J+ & \verb+\mathit{*}+ & $\JA\JB\JC\Jd\Je\Jf\Jone\Jtwo\Jthree$ \\
-    Bold upright & -- & \verb+\V+ & \verb+\bm{\mathrm{*}}+ & $\VA\VB\VC\Vd\Ve\Vf\Vone\Vtwo\Vthree$ \\
-    Bold italic & -- & \verb+\BJ+ & \verb+\bm{\mathit{*}}+ & $\BJA\BJB\BJC\BJd\BJe\BJf\BJone\BJtwo\BJthree$ \\
+    Bold italic & -- & \verb+\BJ+ & \verb+\boldcommand{\mathit{*}}+ & $\BJA\BJB\BJC\BJd\BJe\BJf\BJone\BJtwo\BJthree$ \\
     Sans serif & -- & \verb+\F+ & \verb+\mathsf{*}+ & $\FA\FB\FC\Fd\Fe\Ff\Fone\Ftwo\Fthree$\\
-    Bold sans serif & -- & \verb+\BF+ & \verb+\bm{\mathsf{*}}+ & $\BFA\BFB\BFC\BFd\BFe\BFf\BFone\BFtwo\BFthree$\\
+    Bold sans serif & -- & \verb+\BF+ & \verb+\boldcommand{\mathsf{*}}+ & $\BFA\BFB\BFC\BFd\BFe\BFf\BFone\BFtwo\BFthree$\\
     % \texttt{bbold} blackboard bold & \texttt{bbold},\texttt{mathbbol} & % \verb+\II+ \verb++ & $\IIA\IIB\IIC\IId\IIe\IIf\IIone\IItwo\IIthree$ \\
     % \texttt{bbm} blackboard bold serif & \texttt{bbm} & \verb+\bB+ & \verb+\mathbbm{*}+ & $\bBA\bBB\bBC\bBd\bBe\bBf\bBone\bBtwo\bBthree$\\
     % \texttt{bbm} blackboard bold sans & \texttt{bbm} & \verb+\BB+ & \verb+\mathbbmss{*}+ & $\BBA\BBB\BBC\BBd\BBe\BBf\BBone\BBtwo\BBthree$ \\
@@ -70,10 +80,10 @@ for alphabets in which this is possible.
     % \texttt{euscript} cursive* & \texttt{euscript} & \verb+\eul+ \verb++ & $\eulA\eulB\eulC$\\
     % \texttt{euscript} cursive bold* & \texttt{euscript} & \verb+\Beul+ \verb++ & $\BeulA\BeulB\BeulC$\\
     Calligraphic* & -- & \verb+\C+ & \verb+\mathcal{*}+ & $\CA\CB\CC$ \\
-    Calligraphic bold* & -- & \verb+\BC+ & \verb+\bm{\mathcal{*}}+ & $\BCA\BCB\BCC$ \\
+    Calligraphic bold* & -- & \verb+\BC+ & \verb+\boldcommand{\mathcal{*}}+ & $\BCA\BCB\BCC$ \\
     AMS blackboard bold* & \texttt{amsfonts} & \verb+\I+ & \verb+\mathbb{*}+ & $\IA\IB\IC$ \\
-    Fraktur & \texttt{amsfonts} & \verb+\fr+ & \verb+\mathfrak{*}+ & $\frA\frB\frC\fra\frb\frc\frone\frtwo\frthree$\\
-    Fraktur bold & \texttt{amsfonts} & \verb+\Bfr+ & \verb+\bm{\mathfrak{*}}+ & $\BfrA\BfrB\BfrC\Bfra\Bfrb\Bfrc\Bfrone\Bfrtwo\Bfrthree$\\
+    Fraktur & \texttt{amsfonts} & \verb+\K+ & \verb+\mathfrak{*}+ & $\KA\KB\KC\Ka\Kb\Kc\Kone\Ktwo\Kthree$\\
+    Fraktur bold & \texttt{amsfonts} & \verb+\BK+ & \verb+\boldcommand{\mathfrak{*}}+ & $\BKA\BKB\BKC\BKa\BKb\BKc\BKone\BKtwo\BKthree$\\
     \bottomrule
   \end{tabular}
   \caption{Prefixes for Latin and Greek letters.
